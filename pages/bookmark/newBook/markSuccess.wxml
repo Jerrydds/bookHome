@@ -1,0 +1,16 @@
+<view>
+  <view>
+    <view class="icon-style">
+        <icon type="success" size="87" color="#4971A4" />
+      <view class="text">
+        书签制作成功
+      </view>
+    </view>
+  </view>
+  <view class="buttom">
+    <view class="check" bindtap="ViewBookmarks">查看书签</view>
+  </view>
+  <view class="buttom">
+    <view class="return" bindtap="returnbookMark">返回书签首页</view>
+  </view>
+</view>

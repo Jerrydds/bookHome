@@ -1,0 +1,67 @@
+<view>
+  <view class='scanbook'>
+    <image src='../../imgs/ISBN_example.png' class='example'></image>
+    <text class='desc'>录入红框内13位ISBN码</text>
+    <text class='desc'>结算后我们会为您预约快递上门取书</text>
+    <view class='scan-btn' bindtap='scan'>
+      <image src='../../imgs/scancode.png' class='scan-icon'></image>
+      <text>扫码卖书</text>
+    </view>
+    <input placeholder-style='color:#999;' name='isbnInput' type='number' maxlength='13' bindinput='isbnWatch' class='ISBN' confirm-type='done' placeholder='手动输入13位ISBN码'></input>
+    <view class='why'>
+      <view class='item'>
+        <text class='title'>什么书是不可以卖的?</text>
+        <view class='text'>
+          1、非法出版物和非卖品；2004年以前出版的图书；教材及教辅类图书；职业考试类图书；养生、中医类图书；杂志。
+        </view>
+        <view class='text'>
+          2、老化、破损、发黄严重、有污渍、有过量标注和划线等影响阅读的书籍。
+        </view>
+      </view>
+
+      <view class='item'>
+        <text class='title'>书的回收价格是怎么定的?</text>
+        <view class='text'>
+          我们根据库存和市场情况动态调整回收价，部分好书高价回收哦~ </view>
+      </view>
+
+      <view class='item'>
+        <text class='title'>满多少本书才能卖呢？运费怎么算?</text>
+        <view class='text'>
+          满{{config.buildOrderCount}}本或收购总价满{{config.buildOrderMoney}}元起成单；单次卖书满{{config.noExpressCount}}本或总价满{{config.noExpressMoney}}元，猪猪书屋包邮，邮费一律由猪猪书屋垫付。 </view>
+      </view>
+
+      <view class='item'>
+        <text class='title'>卖书的钱如何到账?</text>
+        <view class='text'>
+          收到书后，我们将在1—3个工作日内完成书的审核。审核后，除去未收到的书和不合格的书，将支付书费到您的猪猪书屋账户，您可以提现。 </view>
+      </view>
+
+      <view class='item'>
+        <text class='title'>审核后不符合要求的书如何处理?</text>
+        <view class='text'>
+          审核不符合要求的书籍我们会为您保留一周，一周内您可以选择：
+        </view>
+        <view class='text'>
+          1、寄还给您，您需承担到付运费；
+        </view>
+        <view class='text'>
+          2、一周内您在猪猪书屋购买书籍，我们可为您一同寄回。
+        </view>
+        <view class='text'>
+          以上请联系客服：fk_zzsw@hey900.com；超过一周则不再保留不符合要求的书籍。
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='h100'></view>
+  <view class='shopcart' bindtap='goList'>
+    <view class='left'>
+      <image src='../../imgs/cart_icon.png' class='cart-icon'></image>
+      <view class='text'>({{shopLength}})</view>
+    </view>
+    <view class='right'>
+      查看清单
+    </view>
+  </view>
+</view>

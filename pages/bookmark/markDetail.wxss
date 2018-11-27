@@ -1,0 +1,31 @@
+/* pages/bookmark/markDetail.wxss */
+page{
+  background: #3A3F44;
+}
+.img-box{
+  width: 100%;
+  height: auto;
+}
+.img{
+  width: 100%;
+}
+.deal{
+  width: 100%;
+  text-align: center;
+  font-size: 36rpx;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  line-height: 96rpx;
+  padding: 40rpx 0 76rpx;
+  
+}
+.button{
+  width: 33.46%;
+  border: 2px solid #FFFFFF;
+  border-radius: 100px;
+  display: inline-block;
+  height: 96rpx;
+}
+.delete-button{
+  margin-left:9.7%; 
+}

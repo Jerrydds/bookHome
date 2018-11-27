@@ -1,0 +1,39 @@
+<view class="mark-module">
+  <navigator url='calendar'>
+    <view class="calendar">
+      <view>
+        <image class="calendar-icon" src="../../imgs/bookmark/group.png"></image>
+        <text class="calendar-text">读书日历</text>
+        <image class="calendar-right" src="../../imgs/bookmark/right.png"></image>
+      </view>
+    </view>
+  </navigator>
+  <view class="bookmark">
+    <view class="bookmark-scroll">
+      <scroll-view scroll-x="true">
+        <view class="bookmark-item" wx:if="{{bookmark.length<=0}}">
+          <navigator url='markDetail?imgUrl=https://usedgoods-img.thy360.com/u178/bookmark26249'>
+            <image src="https://usedgoods-img.thy360.com/u178/bookmark26249" mode="aspectFill"></image>
+          </navigator>
+        </view>
+        <view class="bookmark-item" wx:for="{{bookmark}}" wx:for-item="item" wx:key="key">
+          <navigator url='markDetail?id={{item.id}}&imgUrl={{item.bookmarkImageUrl}}'>
+            <image src="{{item.bookmarkImageUrl}}" mode="aspectFill"></image>
+          </navigator>
+        </view>
+      </scroll-view>
+    </view>
+    <view wx:if="{{bookmark.length>0}}">
+      <view class="full" bindtap="wholeMark">查看全部书签</view>
+    </view>
+
+    <view class='mark-box'>
+      <view class="mark-text" bindtap="markbook">
+        制作书签
+      </view>
+    </view>
+  </view>
+  <view class="expressions">
+    <image class="mingyan" src="../../imgs/bookmark/mingyan.png"></image>
+  </view>
+</view>

@@ -1,0 +1,23 @@
+<view class='unstandard-wrapper'>
+  <view class='block'>
+    <view class='desc'>
+      已将回收款{{amount}}发放到您的账户<text wx:if='{{withholdMoney >=0}}'>，扣除{{withholdMoney}}元</text>，其中{{errbook.length}}本不符合回收规则，详单如下
+    </view>
+    <view class='book-list'>
+      <view class='book' wx:for='{{errbook}}'>
+        <image class='book-cover' src='{{item.bookImage}}'></image>
+        <view class='detail'>
+          <view class='name'>{{item.bookName}}</view>
+          <view class='author'>{{item.bookAuthor}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='block'>
+    <text class='text mb_30'>以上书籍，我们会为您保留一周，一周内您可以选择：</text>
+    <text class='text mb_10'>1.寄还给您，但需要您承担到付运费。</text>
+    <text class='text mb_30'>2.一周内您在猪猪二手书购买书籍，您可以联系我们，我们可为您一同寄回。</text>
+    <text class='text mb_20'><text class='red'>*</text>超过一周则不再保留不合要求的书籍。</text>
+    <text class='text mb_30'>有更多疑问请联系：fk_zzjs@hey900.com</text>
+  </view>
+</view>

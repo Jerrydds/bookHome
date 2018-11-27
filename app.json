@@ -1,0 +1,70 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/search/index",
+    "pages/bookdetail/bookDetail",
+    "pages/withdraw/withdraw", 
+    "pages/placeorder/recover/recover",
+    "pages/placeorder/recover/agreement",
+    "pages/step/step1/step",
+    "pages/scanbook/scanbook",
+    "pages/mine/mine",
+    "pages/orderdetail/recover/detail/detail",
+    "pages/orderlist/recover/recover",
+    "pages/orderdetail/recover/unstandard/unstandard",
+    "pages/step/step3/step",
+    "pages/step/step2/step",
+    "pages/list/list",
+    "pages/withdrawalResult/result",
+    "pages/bookmark/markList",
+    "pages/bookmark/markDetail",
+    "pages/bookmark/calendar",
+    "pages/bookmark/bookmark",
+    "pages/bookmark/newBook/index",
+    "pages/bookmark/newBook/preview",
+    "pages/bookmark/newBook/addbook",
+    "pages/bookmark/newBook/markSuccess",
+    "pages/bookmark/newBook/imgCut"
+  ],
+  "window": {
+    "backgroundColor": "#f2f2f7",
+    "backgroundTextStyle": "#fff",
+    "navigationBarBackgroundColor": "#4971a4",
+    "navigationBarTitleText": "猪猪书屋",
+    "navigationBarTextStyle": "#fff",
+    "enablePullDownRefresh": false,
+    "onReachBottomDistance": 50
+  },
+  "tabBar": {
+    "color": "#c5c5c5",
+    "backgroundColor": "#f0f0f0",
+    "position": "bottom",
+    "selectedColor": "#4971a4",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./imgs/home.png",
+        "selectedIconPath": "./imgs/home_active.png"
+      },
+      {
+        "pagePath": "pages/bookmark/bookmark",
+        "text": "书签",
+        "iconPath": "./imgs/bookmark/list@2x.png",
+        "selectedIconPath": "./imgs/bookmark/shuqian.png"
+      },
+      {
+        "pagePath": "pages/list/list",
+        "text": "买卖清单",
+        "iconPath": "./imgs/list.png",
+        "selectedIconPath": "./imgs/list_active.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "./imgs/mine.png",
+        "selectedIconPath": "./imgs/mine_active.png"
+      }
+    ]
+  }
+}

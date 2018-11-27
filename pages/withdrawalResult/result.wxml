@@ -1,0 +1,14 @@
+<view>
+  <view class='wrapper'>
+    <view class="wrap_box">
+     <image class='succes_icon' src='../../imgs/ours/withdraw_succes1.png'></image>
+     </view>
+    <view class='desc'>
+      <text>提现成功</text>
+    </view>
+     <view class="wrap_box1 noteInfo">
+         <text class="textBlock">将在申请提现后7个工作日内到账，如超时未到账请联fk_zzjs@hey900.com</text>
+     </view>
+    <button class='home' bindtap='goHome'>返回个人中心</button>
+  </view>
+</view> 

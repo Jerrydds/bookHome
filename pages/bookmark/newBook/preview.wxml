@@ -1,0 +1,55 @@
+<view>
+   <!-- <view class='mark-box'>
+    <view class='top-info'>
+      <view class='head-img'>
+        <image wx:if="{{userInfo.avatarUrl}}" mode='aspectFill' src='{{userInfo.avatarUrl}}'></image>
+        <image wx:if="{{!userInfo.avatarUrl}}" mode='aspectFill' src='../../../imgs/head.png'></image>
+      </view>
+      <view class='top-detail'>
+        <view class='name'>{{userInfo.nickName}}</view>
+        <view class='sort'>这是本月第{{bookInfo.readingMonthCount}}次阅读 <text class='time'>{{createTime.date}}</text></view>
+      </view>
+      <image class='tag' wx:if="{{createTime.day === 1}}" src='../../../imgs/bookmark/mon.png'></image>
+      <image class='tag' wx:if="{{createTime.day === 2}}" src='../../../imgs/bookmark/ture.png'></image>
+      <image class='tag' wx:if="{{createTime.day === 3}}" src='../../../imgs/bookmark/wed.png'></image>
+      <image class='tag' wx:if="{{createTime.day === 4}}" src='../../../imgs/bookmark/thur.png'></image>
+      <image class='tag' wx:if="{{createTime.day === 5}}" src='../../../imgs/bookmark/fri.png'></image>
+      <image class='tag' wx:if="{{createTime.day === 6}}" src='../../../imgs/bookmark/sat.png'></image>
+      <image class='tag' wx:if="{{createTime.day === 0}}" src='../../../imgs/bookmark/sun.png'></image>
+      <view class='line'></view>
+    </view>
+    <view class='book-img'>
+     <image mode='aspectFill' src='{{bookInfo.imageUrl}}'></image>
+    </view>
+    <view class='book-detail'>
+      <view class='line2'></view>
+      <view class='icon left-icon'></view>
+      <view class='icon right-icon'></view>
+      <view>
+       <image class='book-cover' src='{{bookInfo.book.image}}'></image>
+       <view class='book-info'>
+        <view class='title font-one-elipse'>{{bookInfo.book.name}}</view>
+        <view class='author font-one-elipse'>{{bookInfo.book.author}}</view>
+        <view class='score'>豆瓣评分：{{bookInfo.book.average}}</view>
+       </view>
+      </view>
+    </view>
+    <view wx:if="{{bookInfo.remark}}" class='book-desc'>
+      <view class='line2'></view>
+      {{bookInfo.remark}}
+    </view>
+    <view class='mark-bottom'>
+      <image class='code-img' src='../../../imgs/bookmark/erweima.png'></image>
+      <view class='other'>
+        <view class='line3'></view>
+        <view class='text'>进入猪猪书屋</view>
+        <view class='text'>记录你的读书时刻</view>
+      </view>
+    </view>
+  </view>       -->
+  <view class='canvas-box'>
+    <canvas class="canvas-item {{time>0?(time>2?(time>4?'height6':'height4'):'height2'):''}}"  canvas-id="myCanvas"/>
+  </view>
+  <view bindtap='saveImage' class='button'>确认</view>
+</view>
+

@@ -1,0 +1,33 @@
+/* pages/placeorder/recover/agreement.wxss */
+.con {
+    position: absolute;
+    left: 24rpx;
+    right: 0;
+    top: 24rpx;
+    border: 1rpx solid #E6E6EA;
+    padding: 40rpx;
+    width: 620rpx;
+    height: 88%;
+    font-size: 28rpx;
+    color: #262626;
+    background-color: #fafafa;
+}
+.title {
+    text-align: center;
+    font-size: 36rpx;
+}
+.submit {
+    position: fixed;
+    bottom: 0;
+    height: 98rpx;
+    background-color: #85b6f9;
+    color: #fff;
+    font-size: 30rpx;
+    width: 100%;
+    line-height: 98rpx;
+    text-align: center;
+}
+/*屏蔽滚动条*/
+::-webkit-scrollbar{width:0;height:0}
+::-webkit-scrollbar-track,::-webkit-scrollbar-thumb {border-radius: 999px;border:0px solid transparent;}
+::-webkit-scrollbar-corner {background:transparent;}

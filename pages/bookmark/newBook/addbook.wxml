@@ -1,0 +1,25 @@
+<view>
+  <view class='scanbook'>
+    <image src='../../../imgs/ISBN_example.png' class='example'></image>
+    <text class='desc'>录入红框内13位ISBN码</text>
+    <!-- <text class='desc'>结算后我们会为您预约快递上门取书</text> -->
+    <view class='scan-btn' bindtap='scanDetail'>
+      <image src='../../../imgs/scancode.png' class='scan-icon'></image>
+      <text>扫码识别</text>
+    </view>
+    <input placeholder-style='color:#999;' name='isbnInput' type='number' maxlength='13' bindinput='isbnWatch' class='ISBN' confirm-type='done' placeholder='手动输入13位ISBN码'></input>
+  </view>
+  <view class="continue">
+    <view class="border-left">
+      继续读完一本书
+    </view>
+  </view>
+  <view class="bookmark-scroll">
+    <scroll-view scroll-x="true">
+      <view class="bookmark-item" wx:for="{{booksList}}" wx:for-index="idx" wx:for-item="item" wx:key="key" bindtap="markBookIsbn" data-isbn="{{item.isbn}}">
+        <image src="{{item.image}}" mode="aspectFit"></image>
+        <view class='item-text'>{{item.bookName}}</view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

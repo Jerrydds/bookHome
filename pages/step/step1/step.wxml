@@ -1,0 +1,37 @@
+<view>
+  <view class='step-wrapper'>
+    <view class='step-bar'>
+      <view class='step-point'>
+        <image src='../../../imgs/list/Selected@2x.png' class='step-point'></image>
+        <image src='../../../imgs/list/1-1.png' class='step-num'></image>
+      </view>
+      <view class='step-point'>
+        <image src='../../../imgs/list/group.png' class='step-point'></image>
+        <image src='../../../imgs/list/2-1.png' class='step-num'></image>
+      </view>
+      <view class='step-point'>
+        <image src='../../../imgs/list/group.png' class='step-point'></image>
+        <image src='../../../imgs/list/3-1.png' class='step-num'></image>
+      </view>
+      <view class='bar gray-bar'></view>
+      <view class='bar blur-bar'></view>
+    </view>
+  </view>
+
+  <view class='desc'>
+    请确认书籍没有破损、脱页、异味
+  </view>
+
+  <view class='pic-wrapper'>
+   <image src='../../../imgs/list/step11.png' class='pic'></image>
+   <view class='tab'>破损</view>
+  </view>
+  <view class='pic-wrapper'>
+   <image src='../../../imgs/list/step12.png' class='pic .pic2'></image>
+   <view class='tab'>脱页</view>
+  </view>
+
+  <view class='btn-wrapper'>
+    <button class='next' bindtap='next'>下一步</button>
+  </view>
+</view>

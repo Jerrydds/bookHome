@@ -1,0 +1,16 @@
+  <view class='step-bar'>
+    <view class='step-point'>
+      <image src='../../../../imgs/steppoint/{{stepBar.active1 === "active" ? "point_active" : "point"}}.png' class='stepImg-point'></image>
+      <text class='{{stepBar.active1}}'>{{stepBar.step1}}</text>
+    </view>
+    <view class='step-point'>
+      <image src='../../../../imgs/steppoint/{{stepBar.active2 === "active" ? "point_active" : "point"}}.png' class='stepImg-point'></image>
+      <text class='{{stepBar.active2}}'>{{stepBar.step2}}</text>
+    </view>
+    <view class='step-point'>
+      <image src='../../../../imgs/steppoint/{{stepBar.active3 === "active" ? "point_active" : "point"}}.png' class='stepImg-point'></image>
+      <text class='{{stepBar.active3}}'>{{stepBar.step3}}</text>
+    </view>
+    <view class='bar gray-bar'></view>
+    <view class='bar blur-bar {{stepBar.width}}'></view>
+  </view>

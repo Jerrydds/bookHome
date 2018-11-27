@@ -1,0 +1,35 @@
+<view>
+<view class='container'>
+  <view class='search'>
+    <view class='sear-box'>
+      <image bindtap="searchGoods" class='search-img' src='../../imgs/home/search@2x.png'>
+      </image>
+      <input bindinput="bindKeyInput" placeholder-style="color:#ccc;" bindconfirm="searchGoods" value="{{searchValue}}" class="sear-input" placeholder="请输入书名" />
+    </view>
+  </view>
+
+  <view class='list'>
+    <navigator wx:for="{{goodsList}}" url="/pages/bookdetail/bookDetail?bookId={{item.isbn}}">
+      <view class='list-item'>
+        <view class='item-left'>
+          <image wx:if="{{item.image}}" src='{{item.image}}'></image>
+        </view>
+        <view class="item-right">
+          <view class="item-text">
+            <text class="item-title">{{item.name}}</text>
+            <text class="item-author">{{item.author}}</text>
+          </view>
+            <view class="price-text">
+            <text class="price-discount">优惠价</text>
+            <text class="price-money">¥{{item.price}}</text>
+          </view>
+        </view>
+      </view>
+    </navigator>
+  </view>
+    <view wx:if="{{goodsList.length === 0}}" class='empty'>
+    <image src='../../imgs/empty/group_2@2x.png'></image>
+    <view>没有搜到相关书籍哦~</view>
+  </view>  
+</view>
+</view>

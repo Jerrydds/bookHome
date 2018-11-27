@@ -1,0 +1,32 @@
+<!--pages/mine/mine.wxml-->
+<!-- <text>{{userInfo.nickName}}</text>
+<image src='{{userInfo.avatarUrl}}'></image> -->
+
+<view>
+  <view class='user-info'>
+    <image class='bg' src='../../imgs/mine_background.png'></image>
+    <image class='avatar' src='{{userInfo.avatarUrl}}'></image>
+    <view class='name'>{{userInfo.nickName}}</view>
+    <view class='wallet'>
+      <text class='title'>余额</text><text class="balance"><text class='icon'>￥</text>{{returnData.balance}}</text>
+      <text class='withdraw' bindtap='withdraw'>提现</text>
+    </view>
+    <!--操作  -->
+    <view class='operat-wrapper firstBox'  bindtap='soldOut'>
+      <view class='sold'>
+        <image class='brand' src='../../imgs/ours/group@2x.png'></image>
+         <text class="sold_font">我卖出的</text>
+      </view>
+      <view class='sold soldLeft'>
+        <text class="income">总收入:<text class="income_money">{{returnData.income}}元</text></text>
+      </view>
+    </view>
+    <view class='operat-wrapper secondBox'  bindtap='buyIn'>
+      <view class='sold'>
+        <image class='brand' src='../../imgs/ours/group_2@2x.png'></image>
+        <text class="sold_font">我买到的</text>
+      </view>
+    </view>
+    <!-- <view bindtap='goBookDetail'>详情页面</view> -->
+  </view>
+</view>

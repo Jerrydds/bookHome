@@ -1,0 +1,31 @@
+<!--start 用户自动截取正方形照片  -->
+<view class="box-empty">
+一程序猿问科比：你为什么能如此成功？
+科比：你知道早晨4点钟的纽约是什么样子吗？
+</view>
+<view class="box-empty">
+  程序猿：不知道，那时候我还没下班
+</view>
+<view class="box-empty">
+  科比：……
+</view>
+<template name="we-cropper">
+    <canvas
+            class="cropper  {{cutImage}}" 
+            disable-scroll="true"
+            bindtouchstart="touchStart"
+            bindtouchmove="touchMove"
+            bindtouchend="touchEnd"
+            style="width:{{width}}px;height:{{height}}px;"
+            canvas-id="{{id}}">
+    </canvas>
+</template>
+<view class="cropper-wrapper {{cutImage}}">
+    <template is="we-cropper"  data="{{...cropperOpt}}"/>
+      <view class="cropper-buttons ">
+          <view class="upload boxshaw cropperUpload" bindtap="chooseimage">选择图片</view>
+          <view  class="boxshaw getCropperImage" bindtap="getCropperImage">确定</view>
+      </view>
+</view>
+
+<!--end 用户自动截取正方形照片  -->

@@ -1,0 +1,38 @@
+.icon-style {
+  text-align: center;
+  margin-top: 150rpx;
+}
+
+.icon-style .text {
+  padding-top: 40rpx;
+  margin-bottom: 130rpx;
+  font-size: 36rpx;
+  color: #000;
+  line-height: 36rpx;
+}
+.buttom {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 30rpx;
+}
+
+.buttom .check {
+  background: #4971a4;
+  box-shadow: 0 0 11px 0 rgba(73, 113, 164, 0.54);
+  border-radius: 10rpx;
+  color: #fff;
+  padding: 24rpx 0;
+  width: 90%;
+  margin: auto auto;
+}
+
+.buttom .return {
+  background: #fff;
+  box-shadow: 0 0 11px 0 rgba(73, 113, 164, 0.54);
+  border: 2rpx solid #4971a4;
+  border-radius: 10rpx;
+  color: #4971a4;
+  padding: 24rpx 0;
+  width: 90%;
+}

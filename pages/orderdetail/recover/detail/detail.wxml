@@ -1,0 +1,120 @@
+<view class='wrapper'>
+  <view class='detail'>
+    <!-- 顶部流动状态 回收订单书籍的详情-->
+    <view class='block' wx:if="{{orderType==='0'}}">
+      <!--待签收  -->
+      <view class='content'>
+        <text wx:if='{{cancelText1}}' class='cancel-text {{cancelText2 ? "" : "mb_0"}}'>{{cancelText1}}</text>
+        <text wx:if='{{cancelText2}}' class='cancel-text'>{{cancelText2}}</text>
+        <view class='step-wrapper' wx:if='{{orderStatus !== 1}}'>
+          <!--进度条  -->
+          <include src="step1.wxml" />
+        </view>
+        <view class='desc-wrapper'>
+          <view wx:if='{{desc1}}' class='desc'>{{desc1}}</view>
+          <view wx:if='{{desc2}}' class='desc'>{{desc2}}</view>
+        </view>
+        <view class='question' wx:if='{{errBook.length > 0 && isDone}}'>
+          <text bindtap='questionDetail'>若有疑问，可点击查看详情>></text>
+        </view>
+      </view>
+    </view>
+    <!-- 顶部流动状态 购书订单详情-->
+    <view class='block' wx:if="{{orderType==='1'}}">
+      <!-- 待签收   -->
+      <view class='content'>
+        <view class="clear-font" wx:if='{{orderStatusBuy !== 3}}'>消毒清洁中</view>
+        <text wx:if='{{cancelText1}}' class='cancel-text {{cancelText2 ? "" : "mb_0"}}'>{{cancelText1}}</text>
+        <text wx:if='{{cancelText2}}' class='cancel-text'>{{cancelText2}}</text>
+        <view class='step-wrapper' wx:if='{{orderStatusBuy !== 3}}'>
+          <!-- 进度条   -->
+          <include src="step2.wxml" />
+        </view>
+        <view class='desc-wrapper paddingLR'>
+          <view wx:if='{{desc1}}' class='desc '>{{desc1}}</view>
+          <view wx:if='{{desc2}}' class='desc textCenter'>{{desc2}}</view>
+        </view>
+      </view>
+    </view>
+    <!--书单列表和价格  -->
+    <view class='block'>
+      <view class='book-list'>
+        <view class='book' wx:for='{{orderDetail.orderItems}}' wx:key='{{item.bookIsbn}}' data-id='{{item.bookIsbn}}' bindtap='goBookDetail'>
+          <view class='left'>
+            <image class='cover' src='{{item.bookImage}}'></image>
+            <view class='detail'>
+              <view class='name'>{{item.bookName}}</view>
+              <view class='author'>{{item.bookAuthor}}</view>
+            </view>
+          </view>
+          <text class='price'><text class='icon'>￥</text>{{item.totalAmount}}</text>
+        </view>
+      </view>
+      <view class='price-list'>
+        <view class='price'>
+          <text class='left'>小计<text class='m_l65'>共{{orderDetail.orderItems.length}}本</text></text>
+          <text class='right'><text class='icon'>￥</text>{{orderDetail.bookAmount}}</text>
+        </view>
+        <view class='price'>
+          <text class='left'>运费</text>
+          <text class='right'><text wx:if='{{orderDetail.recycleOrder.expressCharges > 0}}'>-</text>
+          <text class='icon'>￥</text>{{orderDetail.expressFee}}</text>
+        </view>
+         <view class='price' wx:if="{{(orderDetail.withholdMoney != '0.00') && orderType=== '0'}}">
+          <text class='left'>扣款</text>
+          <text class='right'><text wx:if='{{orderDetail.recycleOrder.withholdMoney > 0}}'>-</text>
+          <text class='icon'>￥</text>{{orderDetail.withholdMoney}}</text>
+        </view> 
+        <view class='price'>
+          <text class='left total-left'>总价</text>
+          <text class='right total'>
+            <text class='icon'>￥</text>{{orderDetail.totalAmount}}
+          </text>
+        </view>
+      </view>
+    </view>
+    <!--物流和订单信息  -->
+    <view class='block'>
+      <view class='info-block'>
+        <view class='title blue'>物流信息</view>
+        <view class='info-row'>
+          <text class='left'>收货人</text>
+          <text class='right'>{{address.contact}} {{address.phone}}</text>
+        </view>
+        <view class='info-row'>
+          <text class='left'>收货地址</text>
+          <text class='right'>{{address.village}}{{address.room}}</text>
+        </view>
+      </view>
+      <view class='info-block'>
+        <view class='title yellow'>订单信息</view>
+        <view class='info-row'>
+          <text class='left'>订单号</text>
+          <text class='right'>{{orderDetail.orderId}}</text>
+        </view>
+        <view class='info-row'>
+          <text class='left'>下单时间</text>
+          <text class='right'>{{orderDetail.createTime}}</text>
+        </view>
+      </view>
+    </view>
+
+    <!--取消订单  -->
+    <!-- <view wx:if='{{orderStatus === 0}}' class='cancel' bindtap='orderCancel'>取消订单</view> -->
+    <view wx:if="{{orderStatus === 0 && orderType=== '0'}}" class="buttom_btn">
+      <view class='cancel marginR' bindtap='toLink'>订单咨询</view>
+      <view class='cancel cancel_btn' bindtap='orderCancel'>取消订单</view>
+    </view>
+    <!-- 购买订单 -->
+     <view  class="buttom_btn" wx:if="{{orderType=== '1'}}">
+       <!-- <view  wx:if="{{orderStatusBuy === 1 && orderType=== '1'}}" class='cancel marginR' bindtap='toLink'>订单咨询</view> -->
+        <view  wx:if="{{orderStatusBuy === 0 && orderType=== '1'}}" class='cancel marginR cancel_btn' bindtap='orderCancel'>取消订单</view>  
+      <view  wx:if="{{orderStatusBuy === 0 && orderType=== '1'}}" class='cancel' bindtap='payoff'>立即支付</view>
+    
+    </view>
+    <view  class="buttom_btn1" wx:if="{{orderStatusBuy === 1 && orderType=== '1'}}">
+          <view   class='cancel marginR' bindtap='toLink'>订单咨询</view>
+    </view>
+
+  </view>
+</view>

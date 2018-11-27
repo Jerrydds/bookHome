@@ -1,0 +1,16 @@
+<view wx:if="{{MarkList.length>0}}">
+ <view wx:for="{{MarkList}}">
+    <view class='book-title' bindtap='showMark'  data-idx="{{index}}">{{item.bookName}}<image class="rotImg {{item.showMarkList?'trans':''}}" src="../../imgs/bookmark/right.png"></image></view>
+    <view class="img-list" wx:if="{{item.showMarkList}}"> 
+      <scroll-view scroll-x="true" class="goods">
+        <view class="goodsimg {{idx==0?'mar-left':''}}" wx:for="{{item.markList}}"  wx:for-item="it" wx:for-index="idx">
+           <navigator url='markDetail?id={{it.id}}&imgUrl={{it.bookmarkImageUrl}}&idx1={{index}}&idx2={{idx}}'><image class="goodsimg1" mode='aspectFill' src="{{it.bookmarkImageUrl}}"></image></navigator>
+        </view>
+      </scroll-view>
+    </view> 
+ </view>
+</view>
+ <view class='empty' wx:if="{{MarkList.length===0}}">
+  <image src='../../imgs/bookmark/mark-empty.png'></image>
+  <view>暂无内容~</view>
+ </view>

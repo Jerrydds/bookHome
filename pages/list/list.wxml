@@ -1,0 +1,64 @@
+<!--list.wxml-->
+<view>
+  <view class='content'>
+    <!--tab  -->
+      <view class="tab">
+        <scroll-view scroll-x="true" class="goods">
+          <view bindtap="getGoods" class="goodsimg {{type1 == item.type1 ? 'on' : ''}}" data-typ="{{item.type1}}" wx:for="{{tabList}}">{{item.name}}
+            <image wx:if="{{type1 === item.type1 }}" class="goodsimg1" src="../../imgs/home/Underline@2x.png"></image>
+          </view>
+        </scroll-view>
+      </view>
+      <!--滚动列表  -->
+      <!-- <scroll-view scroll-y class='listBox'> -->
+      <view class='listBox'>
+        <view class='tip' wx:if="{{type1 != 'buy'&& items.length>0}}">满{{config.buildOrderCount}}本或{{config.buildOrderMoney}}元起收</view>
+        <checkbox-group bindchange="checkboxChange">
+          <view class="listcheckbox" wx:for="{{items}}">
+            <label class='checkChooselabel'>
+              <checkbox value="{{item.id}}" disabled="{{item.invalidStr}}" class='checkChooseBox' checked='{{item.invalidStr?false:item.check}}' />
+            </label>
+            <view class='listCont'>
+              <view class='listCont-mask' wx:if="{{item.invalidStr}}">售罄</view>
+              <image class='bookImg' src='{{item.image}}' />
+              <view class='listContRight'>
+                <view class="title ellipsis">
+                  {{item.name}}
+                </view>
+                <view class='author ellipsis'>{{item.author ? item.author : '佚名'}}</view>
+                <view class='price-content'>
+                  <text class='rateTxt'>{{type1 != 'buy'?'回收价':'优惠价'}}</text>
+                  <text class='moneyIcon' wx:if='{{item.totalAmount}}'>￥</text>
+                  <text class='rateCount'>{{item.totalAmount ? item.totalAmount : '无'}}</text>
+                </view>
+              </view>
+            </view>
+            <view bindtap='delItem' data-id="{{item.id}}" class='del-wrapper'>
+              <image class='del-item' src='../../imgs/list/rubbish.png'></image>
+            </view>
+          </view>
+        </checkbox-group>
+      </view>
+      <!-- </scroll-view>   -->
+      <!--结算栏  -->
+      <view class='shopcart'>
+        <view class='left'>
+          <text>共{{checkedList.length}}本</text>
+          <view class='count'>
+            <view class='total-count'>
+              <text class='title'>总计</text>
+              <text class='money'>
+                <text class='f22'>￥</text>{{total}}</text>
+            </view>
+            <view wx:if="{{checkedList.length>0}}" class='delivery-count'>
+              <text wx:if="{{config.noExpressCount>checkedList.length && total<config.noExpressMoney}}">满{{config.noExpressCount}}本或满{{config.noExpressMoney}}元包邮，{{type1 != 'buy'?'扣除运费':'需运费'}}￥{{realExpressFee}}</text>
+              <text wx:if="{{config.noExpressCount<=checkedList.length||total>=config.noExpressMoney}}">包邮</text>
+            </view>
+          </view>
+        </view>
+        <view class='right'>
+          <view bindtap='pay' class='pay {{isCanPay ? "" : "noPay"}}'>去结算</view>
+        </view>
+      </view>
+  </view>
+</view>

@@ -1,0 +1,137 @@
+page {
+  background: rgb(242,242,247)
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 486rpx;
+  color: #fff;
+}
+
+.user-info .bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.user-info .avatar {
+  margin-top: 40rpx;
+  margin-bottom: 30rpx;
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+}
+
+.user-info .name {
+  margin-bottom: 30rpx;
+  line-height: 34rpx;
+  font-size: 34rpx;
+  font-weight: bold;
+}
+
+.user-info .wallet {
+  font-size: 34rpx;
+  display: flex;
+  align-items: center;
+}
+
+.user-info .wallet .title {
+  margin-right: 10rpx;
+  font-size: 30rpx;
+  letter-spacing: 0;
+  line-height: 34rpx;
+}
+.user-info .wallet .balance{
+  font-size:30rpx;
+  color: #FF9C46;
+  letter-spacing: 0;
+  line-height: 34rpx;
+}
+.user-info .wallet .icon {
+  font-size: 30rpx;
+}
+
+.user-info .wallet .withdraw {
+  display: inline-block;
+  margin-left: 20rpx;
+  width: 126rpx;
+  height: 46rpx;
+  line-height: 46rpx;
+  text-align: center;
+  border-radius: 100rpx;
+  border: 1px solid #fff;
+}
+
+.operat-wrapper {
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
+  position: absolute;
+  left: 50%;
+  margin-left: -345rpx;
+  bottom: -75rpx;
+  width: 690rpx;
+  height: 136rpx;
+  background: #fff;
+  border-radius: 10rpx;
+  /* color: #111;
+  font-size: 38rpx; */
+}
+.firstBox {
+  bottom:-75rpx
+}
+.secondBox{
+  bottom:-231rpx
+}
+.operat-wrapper1 {
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
+  position: absolute;
+  left: 50%;
+  margin-left: -345rpx;
+  bottom: -75rpx;
+  width: 690rpx;
+  height: 136rpx;
+  background: #fff;
+  border-radius: 10rpx;
+  /* color: #111;
+  font-size: 38rpx; */
+}
+.operat-wrapper .sold {
+  display: flex;
+  align-items: center;
+}
+
+.operat-wrapper .brand {
+  margin-left: 30rpx; 
+  width: 46rpx;
+  height: 46rpx;
+}
+.sold .sold_font{
+  font-size: 30rpx;
+  color: #333333;
+  letter-spacing: 0;
+  line-height: 30rpx;
+  margin-left: 14rpx;
+}
+.operat-wrapper .soldLeft{
+  margin-left:202rpx
+}
+.operat-wrapper .income{
+  font-size: 30rpx;
+  color: #999999;
+  letter-spacing: 0;
+  line-height: 28rpx;
+}
+/* .operat-wrapper .income_money{
+  color: #3F3F3F;
+  margin-left: 14rpx;
+} */

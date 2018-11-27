@@ -1,0 +1,92 @@
+page {
+  background: rgb(242,242,247)
+}
+
+.wrapper {
+  padding: 120rpx 50rpx 50rpx;
+}
+
+.desc {
+  margin-bottom: 10rpx;
+  line-height: 36rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #333333;
+}
+
+.m_t90 {
+  margin-top: 90rpx;
+}
+
+.m_t70 {
+  margin-top: 70rpx;
+}
+
+.title {
+  margin-bottom: 65rpx;
+  line-height: 36rpx;
+  font-size: 26rpx;
+  color: #333333;
+}
+
+.phone-code {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.phone-code .row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40rpx;
+}
+
+.phone-code .row .input {
+  margin-right: 20rpx;
+  width: 305rpx;
+  height: 65rpx;
+  line-height: 65rpx;
+  box-sizing: border-box;
+  padding-left: 15rpx;
+  font-size: 28rpx;
+  color: #111;
+  border-bottom: 1rpx solid #c5c5c5;
+}
+
+.phone-code .row .btn {
+  width: 180rpx;
+  height: 65rpx;
+  line-height: 65rpx;
+  box-sizing: border-box;
+  border: 1rpx solid #4971A4;
+  text-align: center;
+  border-radius: 10rpx;
+  color: #4971A4;
+  font-size: 28rpx;
+}
+
+.QR {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 30rpx;
+  line-height: 30rpx;
+  color: #333333;
+}
+
+.QR .QR-code {
+  margin-bottom: 30rpx;
+  width: 230rpx;
+  height: 230rpx;
+}
+
+.home {
+  display: block;
+  margin: 50rpx auto 0;
+  width: 584rpx;
+  height: 94rpx;
+  line-height: 94rpx;
+  background: #4971A4;
+  border-radius: 10rpx;
+  color: #fff;
+}

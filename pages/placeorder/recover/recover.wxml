@@ -1,0 +1,101 @@
+<view>
+  <form wx:if='{{!isSuccess}}' bindsubmit="formSubmit" bindreset="formReset">
+    <view class='recover-wrapper'>
+      <view class='block'>
+        <view class='title'>
+          填写地址信息
+          <view class='circle left'></view>
+          <view class='circle right'></view>
+        </view>
+
+        <view class='row'>
+          <text class='label'>姓名</text>
+          <view class='content flex1'>
+            <input class='w100' name='contact' maxlength='20' value='{{orderInfo.address.contact}}' type='text' placeholder='请输入姓名'></input>
+          </view>
+        </view>
+
+        <view class='row'>
+          <text class='label'>手机</text>
+          <view class='content flex1'>
+            <input class='w100' name='phone' maxlength='11' value='{{orderInfo.address.phone}}' type='number' placeholder='请输入手机号'></input>
+          </view>
+        </view>
+
+        <view class='row'>
+          <text class='label'>省市区</text>
+          <view class='content flex1'>
+            <input name='village' maxlength='50' value='{{orderInfo.address.village}}' class='border-dash flex1' type='text' placeholder='请输入省市区'></input>
+          </view>
+        </view>
+
+        <view class='row'>
+          <text class='label'>详细地址</text>
+          <view class='content flex1'>
+            <input name='room' maxlength='50' value='{{orderInfo.address.room}}' class='border-dash flex1' type='text' placeholder='请输入详细地址'></input>
+          </view>
+        </view>
+
+        <view class='row' wx:if="{{type1 != 'buy'}}">
+          <text class='label'>时间</text>
+          <view class='content'>
+            <picker mode="date" value="{{date}}" start="{{startDate}}" end="{{endDate}}" bindchange="bindDateChange">
+              <view class="picker like-select">
+                {{date || '选择日期'}}
+              </view>
+            </picker>
+            <picker class='m-l30' mode="time" value="{{time}}" start="09:00" end="21:00" bindchange="bindTimeChange">
+              <view class="picker like-select">
+                {{time || '选择时间'}}
+              </view>
+            </picker>
+          </view>
+        </view>
+         <text class='tip' wx:if="{{type1 != 'buy'}}">当日17:00前下单最快可在次日收件，17:00后顺延一天</text> 
+        <text class='tip' wx:if="{{type1 != 'buy'}}">您无需支付运费给快递员</text>
+      </view>
+
+      <view class='block'>
+        <view class='title'>
+          {{type1 === 'buy'?'购书':'回收'}}订单清单
+          <view class='circle left'></view>
+          <view class='circle right'></view>
+        </view>
+        <view class='cell'>
+          <view class='cell-row' wx:for="{{orderInfo.cartBookItems}}" wx:key="*this">
+            <text class='name'>{{item.name}}</text>
+            <text class='price'><text class='price-icon'>￥</text>{{item.totalAmount}}</text>
+          </view>
+        </view>
+
+        <view class='cell'>
+          <view class='cell-row'>
+            <text class='name'>小计<text class='m-l40'>共{{orderInfo.bookCount}}本</text></text>
+            <text class='price'><text class='price-icon'>￥</text>{{orderInfo.bookAmount}}</text>
+          </view>
+          <view class='cell-row'>
+            <text class='name'>运费</text>
+            <text class='price'><text wx:if='{{orderInfo.expressCharges > 0}}'>-</text><text class='price-icon'>￥</text>{{orderInfo.expressFee}}</text>
+          </view>
+          <view class='cell-row total'>
+            <text class='name'>总计</text>
+            <text class='price'><text class='price-icon'>￥</text>{{orderInfo.totalAmount}}</text>
+          </view>
+        </view>
+
+        <view class='submit-wrapper'>
+        <view class='ty' >下单即为同意<navigator class="xy" url="/pages/placeorder/recover/agreement">《猪猪书屋交易协议》</navigator></view>
+          <button class='submit sub2' bindtap="showTitle">订单咨询</button> <button class='submit' formType="submit">{{type1 === 'buy'?'微信支付':'提交订单'}}</button>
+        </view>
+      </view>
+
+    </view>
+  </form>
+
+  <view wx:if='{{isSuccess}}' class='success'>
+    <icon class='icon' type='success' size='100' color='#4971a4'></icon>
+    <text class='text'>下单成功</text>
+    <button class='btn blue' bindtap='orderDetail'>查看订单</button>
+    <button class='btn fff' bindtap='goHome'>返回首页</button>
+  </view>
+</view>

@@ -1,0 +1,204 @@
+page{
+  background: #3A3F44;
+  padding-bottom:88rpx; 
+}
+.mark-box{
+  width: 86.7%;
+  background: #fff;
+  height: auto;
+  position: absolute;
+  left: 6.65%;
+  top: 30rpx;
+  z-index: 100;
+}
+.top-info{
+  height: 149rpx;
+  position: relative;
+}
+.head-img{
+  width: 99rpx;
+  height: 99rpx;
+  padding: 24rpx;
+  float: left;
+}
+.head-img image{
+  width: 99rpx;
+  height: 99rpx;
+  border-radius:50%;
+}
+.top-detail{
+ float: right;
+ padding: 35rpx 30rpx 35rpx 0;
+ width: 72%;
+}
+.name{
+  color: #333;
+  font-size:30rpx; 
+}
+.sort{
+  font-size: 24rpx;
+  color: #666666;
+  margin-top:12rpx; 
+}
+.time{
+  float: right;
+  font-size: 20rpx;
+  color: #999999;
+  letter-spacing: 0;
+  line-height: 38rpx;
+}
+.tag{
+  position: absolute;
+  width: 54rpx;
+  height: 77rpx;
+  right:30rpx;
+  top:-2rpx;
+}
+.line{
+  border: 2rpx solid #E7EBF1;
+  width: 90%;
+  position: absolute;
+  top: 149rpx;
+  left: 50%;
+  margin-left:-45%; 
+}
+.book-img{
+  padding: 30rpx;
+  position: relative
+}
+.book-img image {
+  width: 78.53vw;
+  height: 78.53vw;
+}
+.book-detail{
+  height: 200rpx;
+  padding: 30rpx 40rpx 40rpx;
+  position: relative;
+}
+ .line2{
+  border: 1rpx solid #E7EBF1;
+  width: 90%;
+  position: absolute;
+  left: 50%;
+  margin-left:-45%; 
+  top:0;
+} 
+.icon{
+  border-radius:50%;
+  background: #3A3F44;
+  position: absolute;
+  top:-20rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+.left-icon{
+  left:-20rpx;
+}
+.right-icon{
+  right:-20rpx;
+}
+.book-cover{
+  width: 149rpx;
+  height: 200rpx;
+}
+.book-info{
+  float: right;
+  width: 68%;
+}
+.title{
+  font-size: 32rpx;
+  color: #333333;
+  width: 100%;
+  line-height: 32rpx;
+}
+.font-one-elipse{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}
+.author{
+  font-size: 26rpx;
+  line-height: 26rpx;
+  margin-top:18rpx; 
+  color: #999999;
+}
+.score{
+  font-size: 26rpx;
+  color: #4971A4;
+  margin-top: 80rpx;
+}
+.book-desc{
+  position: relative;
+  box-sizing: border-box;
+  padding: 30rpx 40rpx;
+  height: auto;
+  width: 100%;
+  font-size: 22rpx;
+  color: #666666;
+  letter-spacing: 0;
+  line-height: 50rpx;
+}
+.mark-bottom{
+  width: 100%;
+  height: 149rox;
+  padding: 20rpx 40rpx 40rpx;
+  box-sizing: border-box;
+}
+.code-img{
+  width: 88rpx;
+  height: 88rpx;
+}
+.other{
+  float:right;
+  width: 80%;
+  position: relative;
+}
+.line3{
+  border: 2rpx solid #E7EBF1;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top:0;
+}
+.text{
+  font-size: 24rpx;
+  color: #AFAFB3;
+  letter-spacing: 0;
+  line-height: 24rpx;
+  margin-top:18rpx; 
+}
+.button{
+  width: 360rpx;
+  height: 96rpx;
+  border: 2rpx solid #FFFFFF;
+  border-radius: 100rpx;
+  font-size: 36rpx;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  margin: 52rpx auto 0;
+  text-align: center;
+  line-height: 96rpx;
+}
+/* .canvas-box{position: fixed;top: 999999rpx;left: 0}    */
+.canvas-item{
+  width: 100%;
+  height: 1300rpx;
+}
+.height1{
+  height: 1350rpx;
+}
+.height2{
+  height: 1400rpx;
+}
+.height3{
+  height: 1450rpx;
+}
+.height4{
+  height: 1500rpx;
+}
+.height5{
+  height: 1550rpx;
+}
+.height6{
+  height: 1600rpx;
+}

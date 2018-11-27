@@ -1,0 +1,173 @@
+page {
+  background-color: #f2f2f7;
+}
+
+.add {
+  background-color: #fff;
+  margin: 24rpx;
+  border-radius: 10px;
+}
+
+.add .add-scan {
+  text-align: center;
+}
+
+.add-icon {
+  padding: 68rpx 0;
+}
+
+.icon-img {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.add-text {
+  font-size: 30rpx;
+  color: #999;
+  letter-spacing: 0;
+  line-height: 30rpx;
+  padding-bottom: 78rpx;
+}
+
+.book-box {
+  display: flex;
+  padding: 40rpx;
+}
+
+.book-img {
+  padding-right: 34rpx;
+}
+
+.book-img image {
+  width: 164rpx;
+  height: 220rpx;
+}
+
+.book-info {
+  position: relative;
+  max-width: 500rpx;
+}
+
+.book-info .book-name {
+  font-size: 32rpx;
+  color: #333;
+  letter-spacing: 0;
+  line-height: 32rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.book-info .book-author {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  font-size: 26rpx;
+  margin-top: 24rpx;
+  color: #999;
+  letter-spacing: 0;
+  line-height: 26rpx;
+}
+
+.book-info .book-douban {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  min-width: 200rpx;
+  font-size: 26rpx;
+  color: #ccc;
+  letter-spacing: 0;
+  line-height: 26rpx;
+}
+
+.upload {
+  display: flex;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 0 24rpx 24rpx 24rpx;
+}
+
+.upload .upload-img image {
+  padding: 30rpx;
+  width: 162rpx;
+  height: 162rpx;
+}
+
+.upload-text {
+  align-self: center;
+  font-size: 24rpx;
+  color: #999;
+}
+
+.upload-success {
+  align-self: center;
+}
+
+.upload-success .success {
+  font-size: 30rpx;
+  color: #333;
+  line-height: 30rpx;
+}
+
+.upload-success .Prompt {
+  margin-top: 24rpx;
+  font-size: 24rpx;
+  color: #999;
+}
+
+.remark {
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 0 24rpx 24rpx 24rpx;
+  position: relative;
+}
+
+.remark textarea {
+  font-size: 30rpx;
+  color: #333;
+  width: 90.6%;
+  height: 250rpx;
+  letter-spacing: 0;
+  line-height: 30rpx;
+  padding: 30rpx;
+}
+
+.remark .wordLimit {
+  position: absolute;
+  right: 31rpx;
+  bottom: 24rpx;
+  font-size: 24rpx;
+  color: #999;
+  letter-spacing: 0;
+  line-height: 24rpx;
+}
+
+.submit {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 48rpx;
+}
+
+.submit .submit-button {
+  background: #4971A4;
+  box-shadow: 0 0 11px 0 rgba(73, 113, 164, 0.54);
+  border-radius: 10rpx;
+  color: #fff;
+  padding: 24rpx 0;
+  width: 90%;
+  margin: auto auto;
+}
+.submit .submit-gray {
+  background: #A1A1A1;
+  box-shadow: 0 0 11px 0 rgba(73, 113, 164, 0.54);
+  border-radius: 10rpx;
+  color: #fff;
+  padding: 24rpx 0;
+  width: 90%;
+  margin: auto auto;
+}

@@ -1,0 +1,52 @@
+<!--pages/bookdetail/bookDetail.wxml-->
+<view class='wrapper'>
+  <view class='detail'>
+    <!-- 顶部书籍 -->
+    <view class="box padding11">
+      <view class="topWrap">
+        <view class="left_box">
+           <view><image wx:if="{{bookInfo.image}}" class='bg' src='{{bookInfo.image}}' ></image><image wx:if="{{!bookInfo.image}}" class='bg' src='../../imgs/detail/defaultBook.png' ></image>
+           </view>
+        </view>
+        <!-- <view class="left_box"><image class='bg' src=' https://img1.doubanio.com/mpic/s27783358.jpg'></image></view>  -->
+         
+        <view class="right_box">
+          <view class="b_title">{{bookInfo.name}}</view>
+          <view class="b_dec desc_font">{{bookInfo.author}}</view>
+          <view class="b_price">
+            <text class="price-discount">优惠价</text>
+            <text class="price-money"><text class="price_flag">¥</text>{{bookInfo.price}}</text>
+            <text class="sold-money">¥{{bookInfo.originPrice}}</text>
+          </view>
+        </view>
+      </view>
+      <view class="bottomWrap">
+        <!-- <view class="tag" wx:for='{{orderDetail.orderItems}}' wx:key='{{item.id}}'>猪猪优选</view> -->
+         <view class="tag">猪猪优选</view>
+        <view class="tag">已清洁消毒</view> 
+        <view class="tag">极速发货</view> 
+      </view>
+      <view class="circle left"></view>
+       <view class="circle right"></view>
+    </view>
+    <view class="box padding1">
+      <view class="info_title">书籍基本信息</view>
+      <view class="info_content">{{bookInfo.contentDesc}}</view>
+      <view class="circle left"></view>
+       <view class="circle right"></view>
+    </view> 
+     <!-- <view class="box border_bottom_none">
+      <view class="info_title">交易须知贴图</view>
+      <view class="info_content">fdsfdsfdsfds</view>
+    </view> -->
+     <view class="box border_bottom_none Hight padding2">
+      <view class="info_title">交易须知贴图</view>
+      <view class="tag_box">
+        <image class='tag_bg' src='../../imgs/detail/tag_info.png'>tag_info.png</image>
+      </view>
+    </view>  
+  </view>
+  
+  <view wx:if='{{isContinue}}' class="go-cart" bindtap='toBuyBook'><image class="cart-icon"src="../../imgs/detail/cart.png"></image>加入购物车</view>
+   <view wx:if='{{!isContinue}}' class="go-cart badAdd" >已售罄</view>
+</view>

@@ -1,0 +1,38 @@
+ <scroll-view wx:if='{{orderList.length > 0}}' class='scroll' scroll-y bindscrolltolower="lower" enable-back-to-top='true'>
+  <view class='wrapper'>
+    <view class='order-list'>
+      <view class='order' bindtap='detail' data-id='{{item.orderId}}'  wx:for='{{orderList}}' wx:key='{{item.orderId}}'>
+        <view class='title'>
+          <view class='order-num'>
+            <image src='../../../imgs/sell_icon.png'></image>
+            <text wx:if="{{orderType === '0'}}">卖书订单：</text>
+            <text wx:if="{{orderType === '1'}}">买书订单：</text>
+            {{item.orderId}}
+          </view>
+          <view  class="status">{{item.statusDesc}}</view>
+          <view class='circle left'></view>
+          <view class='circle right'></view>
+        </view>
+        <view class='book-list'>
+            <!-- <image wx:for='{{item.orderItems}}' wx:if='{{index < 3}}' wx:key='{{item.id}}' src='{{item.bookImage}}'></image>   -->
+            <view class="image" wx:for='{{item.orderItems}}' wx:if='{{index < 3}}' wx:key='{{item.id}}' style="background:url({{item.bookImage}});background-position:center center;background-size:100%;" ></view> 
+          <!-- <view  wx:for='{{item.orderItems}}' wx:if='{{index < 3}}' wx:key='{{item.id}}'  style="background-image:url({{item.bookImage}}});background-repeat: no-repeat;background-position:center center;  
+    width:165px;height:105px;background-size: cover;">  </view>  -->
+          <text wx:if='{{item.orderItems.length > 3}}' class='squre'></text>
+          <text wx:if='{{item.orderItems.length > 3}}' class='squre'></text>
+          <text wx:if='{{item.orderItems.length > 3}}' class='squre'></text>
+          <text wx:if='{{item.orderItems.length > 3}}'>等{{item.orderItems.length}}本书</text>
+        </view>
+        <view class='foot'>
+          <view class='time'>{{item.createTime}}</view>
+          <text class='price'><text class='icon'>￥</text>{{item.totalAmount}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+<view class='no-list' wx:if='{{orderList.length === 0}}'>
+  <image src='../../../imgs/no_orderlist.png'></image>
+  <text wx:if="{{orderType === '0'}}">暂时没有卖书订单喔~</text>
+  <text wx:if="{{orderType === '1'}}">暂时没有买书订单喔~</text>
+</view>

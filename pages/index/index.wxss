@@ -1,0 +1,152 @@
+ page{
+  background: #f2f2f7;
+ }
+.search{
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left:0;
+  background: #4971a4;
+}
+.sear-box{
+  background:#fff;
+  border-radius:8rpx;
+  width:710rpx;
+  height:60rpx;
+  font-size: 28rpx;
+  box-sizing: border-box;
+  position: absolute;
+  top:20rpx;
+  left: 20rpx;
+}
+.search-img{
+  width:24rpx;
+  height: 30rpx;
+  position: absolute;
+  left: 30rpx;
+  top:17rpx;
+}
+.sear-input{
+  display:inline-block;
+  width:622rpx;
+  min-height: 60rpx;
+  position: absolute;
+  left: 70rpx;
+  top:0;
+}
+.tab{
+  width:100%;
+  height: 78rpx;
+  position: fixed;
+  top:100rpx;
+  left: 0;
+  z-index: 1000;
+  overflow: hidden;
+}
+.goods {
+    white-space: nowrap;
+    display: flex;
+    height: 78rpx;
+    z-index: 11;
+    overflow: auto;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+.goodsimg {
+    display: inline-block;
+    min-width: 208rpx;
+    height: 78rpx;
+    text-align: center;
+    background: #fff;
+    color: #d7d7d7;
+    line-height: 78rpx;
+    font-size: 30rpx;
+    position: relative;
+}
+.on {
+    color: #4971a4; 
+}
+.goodsimg1{
+  width: 52rpx;
+  height: 6rpx;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -26rpx;
+}
+.list{
+  margin-top: 198rpx;
+}
+.list .list-item{
+  display: flex;
+  padding:30rpx;
+  background-color:#fff;
+  margin-bottom:20rpx; 
+  width: 94vw;
+  margin-left:3vw; 
+  border-radius:8rpx;
+  box-sizing: border-box;
+}
+
+.list .list-item .item-left image{
+  width: 164rpx;
+  height: 220rpx;
+}
+
+.item-right {
+  margin-left: 40rpx;
+  position: relative;
+  max-width: 500rpx;
+}
+.item-text .item-title{
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  display:-webkit-box; 
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:1; 
+  font-size: 32rpx;
+  margin-bottom: 20rpx;
+}
+.item-text .item-author{
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  display:-webkit-box; 
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:3; 
+  color: #999;
+  font-size: 26rpx;
+}
+.item-right .price-text{
+  position: absolute;
+  bottom: 3rpx;
+  min-width:200rpx;
+  font-size: 26rpx;
+  color:#999;
+}
+.price-text .price-money{
+  font-size: 26rpx;
+  color: #f14848;
+  margin-left: 12rpx;
+}
+.sellbook-box{
+  width: 50%;
+  text-align: center;
+  position: fixed;
+  bottom: 20rpx;
+  left: 50%;
+  margin-left:-25%;
+  border-radius:80rpx;
+  background: #4971a4;
+  line-height:  98rpx;
+  color: #fff;
+}
+.sellbook-img{
+  width: 40rpx;
+  height: 40rpx;
+  margin-top:30rpx;
+  margin-right: 20rpx; 
+  vertical-align: top;
+}

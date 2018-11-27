@@ -1,0 +1,11 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  box-sizing: border-box;
+  font-family:Microsoft YaHei
+}
+.ellipsis{ 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

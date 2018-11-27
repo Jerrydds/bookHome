@@ -1,0 +1,110 @@
+/* pages/step/step.wxss */
+.step-wrapper {
+  margin-top: 90rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.step-bar {
+  width: 80%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.step-bar .step-point {
+  flex: 0 0 48rpx;
+  position: relative;
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.step-bar .step-point .step-num {
+  position: absolute;
+  top: 68rpx;
+  left: 6rpx;
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.bar {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -2rpx;
+  height: 4rpx;
+  z-index: -1;
+  border-radius: 2rpx;
+}
+
+.gray-bar {
+  background: #ECECEC;
+  width: 100%;  
+}
+
+.blur-bar {
+  width: 100%;
+  background:#4971A4;
+}
+
+.desc {
+  color: #111;
+  font-size: 30rpx;
+  line-height: 36rpx;
+  text-align: center;
+  margin-top: 168rpx;
+}
+
+.pic-wrapper{
+  text-align: center;
+  position: relative;
+}
+
+.pic {
+  margin-top: 38rpx;
+  width: 584rpx;
+  height: 200rpx;
+}
+.pic2 {
+  margin-top: 28rpx;
+}
+.tab{
+  position: absolute;
+  width: 150rpx;
+  height: 35rpx;
+  background: rgba(255, 255, 255, .34);
+  font-size: 26rpx;
+  color: #333333;
+  letter-spacing: 0;
+  right: 80rpx;
+  bottom: 20rpx;
+}
+
+.btn-wrapper {
+  margin-top: 115rpx;
+  text-align: center;
+  font-size: 32rpx;
+}
+
+.next {
+  display: block;
+  margin: 0 auto;
+  width: 584rpx;
+  height: 94rpx;
+  line-height: 94rpx;
+  background: #4971A4;
+  border-radius: 10rpx;
+  color: #fff;
+}
+.back {
+  margin: 30rpx auto 0;
+  display: block;
+  width: 584rpx;
+  height: 94rpx;
+  line-height: 94rpx;
+  background: #fff;
+  border-radius: 10rpx;
+  color: #4971A4;
+  border: 1rpx solid #4971A4;
+}

@@ -1,0 +1,9 @@
+<view>
+<view class='img-box'>
+  <image class='img' mode='widthFix' src='{{imgUrl}}'></image>
+</view>
+<view wx:if="{{markId}}" class='deal'>
+  <view bindtap='saveMark' class='save-button button'>保存</view>
+  <view bindtap='deleteMark' class='delete-button button'>删除</view>
+</view>
+</view>

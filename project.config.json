@@ -1,0 +1,72 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.0",
+	"appid": "wxcfef736784a3fea2",
+	"projectname": "%E7%8C%AA%E7%8C%AA%E4%B9%A6%E5%B1%8B",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "calender",
+					"pathName": "pages/bookmark/calendar",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "markDetail",
+					"pathName": "pages/bookmark/markDetail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "preview",
+					"pathName": "pages/bookmark/newBook/preview",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "marklist",
+					"pathName": "pages/bookmark/markList",
+					"query": ""
+				},
+				{
+					"id": 4,
+					"name": "1",
+					"pathName": "pages/bookmark/bookmark",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "2",
+					"pathName": "pages/bookmark/newBook/index",
+					"query": ""
+				}
+			]
+		}
+	}
+}

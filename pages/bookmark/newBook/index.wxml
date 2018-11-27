@@ -1,0 +1,44 @@
+<view>
+  <view class="add">
+    <view class="add-scan" wx:if="{{bookDetails.length<=0}}">
+      <view class="add-icon">
+        <image bindtap="ScanTo" class='icon-img' src="../../../imgs/bookmark/lvru.png">
+        </image>
+      </view>
+      <view class="add-text">录入你正在读的书，为书签添加封面</view>
+    </view>
+    <view wx:else class="book-box" bindtap="ScanTo">
+      <view class="book-img">
+        <image src="{{bookDetails.image}}"></image>
+      </view>
+      <view class='book-info'>
+        <view class="book-name">{{bookDetails.name}}</view>
+        <view class="book-author">{{bookDetails.author}}</view>
+        <view class="book-douban">豆瓣评分：{{bookDetails.average}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="upload">
+    <view class="upload-img" bindtap="uploadImg" wx:if="{{success}}">
+      <image src="../../../imgs/bookmark/upload.png"></image>
+    </view>
+    <view class="upload-img" bindtap="uploadImg" wx:else>
+      <image src="{{image}}"></image>
+    </view>
+    <view class="upload-text" wx:if="{{success}}">
+      尽量使用接近 1:1 的图片效果更好哦~
+    </view>
+    <view class="upload-success" wx:else>
+      <view class="success">上传成功！</view>
+      <view class="Prompt">点击图片可重新选取</view>
+    </view>
+  </view>
+  <view class="remark">
+    <textarea placeholder="今日所读所想…（选填）" maxlength="{{noteMaxLen}}" bindinput="remark" value="{{remark}}" />
+    <text class="wordLimit ">{{currentNoteLen|0}}/{{noteMaxLen}}</text>
+  </view>
+  <view class="submit">
+    <!-- <view class="submit-button" bindtap="submitMark">提交</view> -->
+    <view class='{{color ? "submit-button" : "submit-gray"}}' bindtap="submitMark">预览</view>
+  </view>
+</view>

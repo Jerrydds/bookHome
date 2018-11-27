@@ -1,0 +1,28 @@
+page{
+  background-color:#000;
+}
+.cropper-wrapper .cropper-buttons {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+ .box-empty{
+  height: 100% ;
+  color: rgba(0, 0, 0, 0);   
+  font-size: 16rpx;
+  background-color: rgba(0, 0, 0, 0.5);
+} 
+.cropper-wrapper.upload {
+  font-size: 40rpx;
+  margin: 25rpx;
+  padding: 25rpx;
+}
+
+.cropper-wrapper .boxshaw {
+  font-size: 40rpx;
+  margin: 25rpx;
+  padding: 25rpx;
+}

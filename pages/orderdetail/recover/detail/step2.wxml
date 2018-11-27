@@ -1,0 +1,17 @@
+  <view class='step-bar'>
+    <view class='step-point'>
+      <image src='../../../../imgs/steppoint/{{buystepBar.active1 === "active" ? "point_active" : "point"}}.png' class='stepImg-point'></image>
+      <text class='{{buystepBar.active1}}'>{{buystepBar.step1}}</text>
+    </view>
+    <!-- <view class='step-point'>
+      <image src='../../../../imgs/steppoint/{{buystepBar.active2 === "active" ? "point_active" : "point"}}.png' class='stepImg-point'></image>
+      <text class='{{buystepBar.active2}}'>{{buystepBar.step2}}</text>
+    </view> -->
+    <view class='step-point'>
+      <image src='../../../../imgs/steppoint/{{buystepBar.active3 === "active" ? "point_active" : "point"}}.png' class='stepImg-point'></image>
+      <text class='{{buystepBar.active3}}'>{{buystepBar.step3}}</text>
+    </view>
+    <view class='bar gray-bar'></view>
+    <view class='bar blur-bar {{buystepBar.width}}'></view>
+    <!-- 我是购买书籍的详情 -->
+  </view>

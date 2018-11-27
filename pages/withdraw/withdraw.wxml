@@ -1,0 +1,26 @@
+<view>
+  <view class='wrapper'>
+    <view class='desc'>
+    因部分功能限制，暂时无法在小程序内提现，
+    <text wx:if='{{!hasCount}}'>在绑定手机号后</text><text wx:else>您已绑定猪猪集市手机号</text>请前往“猪猪集市”公众号内点击“我要提现”。
+    </view>
+    <view class='desc'>如有疑问，请联系fk_zzjs@hey900.com</view>
+    <view wx:if="{{!hasCount}}" class='title m_t90'>1. 绑定手机号</view>
+    <view wx:if="{{!hasCount}}" class='phone-code'>
+      <view class='row'>
+        <input class='input' bindinput='phoneNumber' maxlength="11" placeholder='请输入手机号'></input>
+        <view class='btn' bindtap='getCode'>{{getCodeText}}</view>
+      </view>
+      <view class='row'>
+        <input class='input' maxlength="4" bindinput='QRNumber' type='number' placeholder='请输入验证码'></input>
+        <view class='btn' bindtap='bindPhone'>验证</view>
+      </view>
+    </view>
+    <!-- <view wx:if="{{!hasCount}}" class='title m_t70'>2. 前往公众号提现</view>
+    <view class='QR'>
+      <image bindtap='preImg' src='../../imgs/jishiQR.jpg' class='QR-code'></image>
+      <text>点击后长按二维码关注公众号并提现</text>
+    </view> -->
+    <button class='home' bindtap='goHome'>返回首页</button>
+  </view>
+</view> 

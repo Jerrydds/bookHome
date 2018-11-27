@@ -1,0 +1,46 @@
+/* pages/withdrawalResult/result.wxss */
+page {
+  background: rgb(242,242,247)
+}
+
+.wrapper {
+  padding: 120rpx 50rpx 50rpx;
+}
+.wrap_box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.succes_icon{
+  width: 174rpx;
+  height: 174rpx;
+}
+.desc {
+  margin-bottom: 40rpx;
+  margin-top: 50rpx;
+  line-height: 36rpx;
+  text-align: center;
+  font-size: 40rpx;
+  color: #333333;
+}
+.noteInfo{
+  color: #999999;
+  font-size:28rpx;
+  line-height: 36rpx;
+}
+.textBlock{
+  width:490rpx;
+  display:block;
+  margin:0 auto;
+
+}
+.home {
+  display: block;
+  margin: 58rpx auto 0;
+  width: 670rpx;
+  height: 94rpx;
+  line-height: 94rpx;
+  background: #4971A4;
+  border-radius: 10rpx;
+  color: #fff;
+}

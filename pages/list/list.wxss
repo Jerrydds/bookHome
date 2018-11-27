@@ -1,0 +1,349 @@
+/**list.wxss**/
+page{
+  background: #f2f2f7;
+}
+.con{
+  width: 100%;
+  height: 100%;
+  background: #f2f2f7;
+  display: block;
+  font-family: "微软雅黑";
+  overflow: hidden;
+}
+checkbox .wx-checkbox-input{
+  border-radius: 70rpx;
+}
+checkbox .wx-checkbox-input.wx-checkbox-input-checked{
+  background: #4771A4;
+  color: #fff!important;
+  border: none;
+}
+.swiper-tab{
+  width: 100%; 
+  background: #fff;
+  text-align: center; 
+  line-height: 78rpx;
+  display: flex;
+}
+.swiper-tab-list{
+  font-size: 30rpx; 
+  display: inline-block; 
+  color: #777777; 
+  flex: 1;
+  height: 78rpx;
+  position: relative
+}
+.on{
+  color: #4971A4; 
+} 
+  
+.swiper-box{ 
+  display: block; 
+  height:1020rpx;
+  width: 100%; 
+  overflow: hidden; 
+} 
+
+.tabLine{
+  width: 100%;
+  height: 6rpx;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.hide{
+  display:none;
+}
+.myBuyList,.mySoldList{
+  margin:20rpx;
+  background:#fff;
+  border-radius:4rpx;
+}
+.listcheckbox{
+  position: relative;
+  height: 172rpx;
+  font-size: 26rpx;
+  margin:20rpx;
+  padding: 30rpx;
+  background:#fff;
+  border-radius:4rpx;
+  display: flex;
+  vertical-align: middle;
+}
+.bookImg{
+  height: 172rpx;
+  width: 130rpx;
+  margin: 0 30rpx;
+}
+.listBox{
+  width: 100%;
+  margin-top: 98rpx;
+  padding-bottom:134rpx;
+}
+.listCont{
+  display: flex;
+  vertical-align: middle;
+  flex: 1;
+  position: relative;
+}
+.listCont-mask{
+  position: absolute;
+  top:-30rpx;
+  bottom: -30rpx;
+  left: 30rpx;
+  right: -30rpx;
+  background: rgba(0,0,0,0.67);
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+  line-height: 230rpx;
+  font-size:32rpx; 
+}
+.listContRight{
+  flex: 1;
+  width: 0rpx;
+  text-align: left
+}
+.checkChooselabel{
+  position: relative;
+  margin-top: 60rpx;
+  display: inline-block;
+  vertical-align: middle;
+  width: 46rpx;
+  height: 46rpx;
+}
+.checkChooseBox{
+  position: absolute;
+  display: inline-block;
+}
+.checkedImg,.uncheckedImg{
+  position: absolute;
+  width: 46rpx;
+  height: 46rpx;
+}
+
+.title {
+  margin-bottom: 30rpx;
+  font-size: 32rpx;
+  color: #111;
+  font-weight: bold;
+}
+
+.author {
+  font-size: 26rpx;
+  color: #999;
+}
+
+.price-content{
+  margin-top: 30rpx;
+}
+.price-content .rateTxt {
+  font-size: 26rpx;
+  color: #999;
+  margin-right: 12rpx;
+}
+
+.price-content .moneyIcon {
+  color: #f14848;
+  font-size: 24rpx;
+}
+
+.price-content .rateCount {
+  font-size: 30rpx;
+  color: #f14848;
+  font-weight: bold;
+}
+
+.del-wrapper {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 74rpx;
+  width: 74rpx;
+  text-align: center;
+  border-radius: 10rpx 0 10rpx 0;
+  background: #4971a4;
+}
+
+.del-wrapper .del-item {
+  width: 32rpx;
+  height: 39rpx;
+  display: inline-block;
+  margin-top: 15.5rpx;
+}
+
+.shopcart {
+  position: fixed;
+  z-index: 10;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  height: 112rpx;
+  box-sizing: border-box;
+}
+
+.shopcart .left {
+  height: 100%;
+  justify-content: space-between;
+  display: flex;
+  flex: 1;
+  border-top: 1px solid #d7d7d7;
+  background: #fff;
+}
+
+.shopcart .left>text {
+  width: 80rpx;
+  font-size: 25rpx;
+  margin-left: 20rpx;
+  margin-top: 25rpx;
+  color: #999;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.shopcart .left .count {
+  vertical-align: top;
+  box-sizing: border-box;
+  padding-top: 15rpx;
+  padding-right: 20rpx;
+  height: 112rpx;
+  display: inline-block;
+  font-size: 24rpx;
+  text-align: right;
+  width: 100%;
+}
+.total-count .title {
+  margin-right: 10rpx;
+  font-size: 28rpx;
+  color: #111;
+}
+
+.total-count .money {
+  font-size: 34rpx;
+  color: #f14848;
+  font-weight: 700;
+}
+
+.total-count .f22 {
+  font-size: 22rpx;
+}
+
+.count .delivery-count {
+  color: #999;
+  font-size: 22rpx;  
+}
+
+.shopcart .right .pay {
+  display: inline-block;
+  width: 242rpx;
+  height: 112rpx;
+  line-height: 112rpx;
+  font-size: 36rpx;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  background: #4971a4;
+}
+
+.shopcart .right .noPay {
+  color: #fff;
+  background: #d7d7d7;
+}
+
+.shopcart .right {
+  flex: 0 0 242rpx;
+}
+
+.container{
+  background: #f2f2f7;
+  position:absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; 
+}
+.search{
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left:0;
+  background: #4971a4;
+}
+.sear-box{
+  background:#fff;
+  border-radius:8rpx;
+  width:710rpx;
+  height:60rpx;
+  font-size: 28rpx;
+  box-sizing: border-box;
+  position: absolute;
+  top:20rpx;
+  left: 20rpx;
+}
+.search-img{
+  width:24rpx;
+  height: 30rpx;
+  position: absolute;
+  left: 30rpx;
+
+  top:17rpx;
+}
+.sear-input{
+  display:inline-block;
+  width:622rpx;
+  min-height: 60rpx;
+  position: absolute;
+  left: 70rpx;
+  top:0;
+}
+.tab{
+  width:100%;
+  height: 78rpx;
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index: 1000;
+  overflow: hidden;
+}
+.goods {
+    white-space: nowrap;
+    display: flex;
+    height: 78rpx;
+    z-index: 11;
+    overflow: auto;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+.goodsimg {
+    display: inline-block;
+    min-width: 50vw;
+    height: 78rpx;
+    text-align: center;
+    background: #fff;
+    color: #d7d7d7;
+    line-height: 78rpx;
+    font-size: 30rpx;
+    position: relative;
+}
+.on {
+    color: #4971a4; 
+}
+.goodsimg1{
+  width: 52rpx;
+  height: 6rpx;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -26rpx;
+}
+.tip {
+  font-size:24rpx;
+  line-height: 36rpx;
+  color: #666; 
+  padding-left: 20rpx;
+}

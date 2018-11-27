@@ -1,0 +1,38 @@
+<view>
+  <view class='step-wrapper'>
+    <view class='step-bar'>
+      <view class='step-point'>
+        <image src='../../../imgs/list/Selected@2x.png' class='step-point'></image>
+        <image src='../../../imgs/list/1-1.png' class='step-num'></image>
+      </view>
+      <view class='step-point'>
+        <image src='../../../imgs/list/Selected@2x.png' class='step-point'></image>
+        <image src='../../../imgs/list/2.png' class='step-num'></image>
+      </view>
+      <view class='step-point'>
+        <image src='../../../imgs/list/Selected@2x.png' class='step-point'></image>
+        <image src='../../../imgs/list/3.png' class='step-num'></image>
+      </view>
+      <view class='bar gray-bar'></view>
+      <view class='bar blur-bar'></view>
+    </view>
+  </view>
+
+  <view class='desc'>
+    请确认我们仅会为合格的书籍支付钱款
+  </view>
+
+  <view class='pic-wrapper'>
+   <image src='../../../imgs/list/step31.png' class='pic'></image>
+   <view class='tab'>合格</view>
+  </view>
+  <view class='pic-wrapper'>
+   <image src='../../../imgs/list/step32.png' class='pic .pic2'></image>
+   <view class='tab'>合格</view>
+  </view>
+
+  <view class='btn-wrapper'>
+    <text class='next' bindtap='agree'>同意并下单</text>
+    <text class='back' bindtap='backList'>返回清单</text>
+  </view>
+</view>

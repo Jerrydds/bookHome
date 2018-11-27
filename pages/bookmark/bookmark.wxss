@@ -1,0 +1,102 @@
+page {
+  background: #f2f2f7;
+}
+
+.mark-module {
+  width: 100%;
+  /* overflow: hidden; */
+}
+
+.calendar {
+  padding: 24rpx 0;
+  text-align: center;
+  background: #fff;
+}
+
+.calendar-icon {
+  width: 50rpx;
+  height: 50rpx;
+  vertical-align: middle;
+  margin-left: 15rpx;
+}
+
+.calendar-text {
+  padding-left: 18rpx;
+  font-size: 30rpx;
+  color: #4971a4;
+  letter-spacing: 0;
+  line-height: 36rpx;
+  font-weight: 600;
+}
+
+.calendar-right {
+  float: right;
+  padding-right: 26rpx;
+  width: 44rpx;
+  height: 44rpx;
+}
+
+.bookmark {
+  background: #fff;
+  margin: 24rpx 0;
+}
+
+.bookmark-scroll {
+  padding-top: 52rpx;
+  white-space: nowrap;
+  display: flex;
+  overflow: hidden;
+}
+
+.bookmark-item {
+  display: inline-block;
+  padding: 0 22rpx;
+}
+
+.bookmark-item {
+  /* width:221rpx;
+    height: 330rpx;  *//* overflow: hidden; */
+}
+
+.bookmark-item image {
+  width: 100%;
+  width: 221rpx;
+  height: 330rpx;
+}
+
+.full {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 24rpx;
+  color: #4870a3;
+  letter-spacing: 0;
+  line-height: 24rpx;
+  padding: 24rpx 24rpx 24rpx 0;
+}
+
+.mark-box {
+  display: flex;
+  justify-content: center;
+}
+
+.mark-text {
+  margin: 70rpx 0;
+  text-align: center;
+  width: 50%;
+  background: #4971a4;
+  box-shadow: 0 0 11rpx 0 rgba(73, 113, 164, 0.54);
+  border-radius: 100rpx;
+  color: #fff;
+  padding: 24rpx 0;
+}
+
+.expressions {
+  text-align: center;
+  background-color: #fff;
+}
+
+.expressions .mingyan {
+  margin: 55rpx auto;
+  width: 630rpx;
+  height: 172rpx;
+}

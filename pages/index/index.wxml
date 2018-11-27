@@ -1,0 +1,38 @@
+<view>
+  <view class='search'>
+    <view class='sear-box'>
+      <image bindtap="goSearch" class='search-img' src='../../imgs/home/search@2x.png'>
+      </image>
+      <input bindinput="bindKeyInput" placeholder-style="color:#ccc;" bindconfirm="goSearch" value="{{searchValue}}" class="sear-input" placeholder="请输入书名" />
+    </view>
+  </view>
+  <view class="tab">
+    <scroll-view scroll-x="true" class="goods">
+      <view bindtap="getGoods" wx:key="key" class="goodsimg {{categoryId == item.id ? 'on' : ''}}" data-id="{{item.id}}" wx:for="{{tabList}}">{{item.name}}
+        <image wx:if="{{categoryId === item.id}}" class="goodsimg1" src="../../imgs/home/Underline@2x.png"></image>
+      </view>
+    </scroll-view>
+  </view>
+  <view class='list'>
+  <navigator wx:for="{{goodsList}}" wx:key="key" url="/pages/bookdetail/bookDetail?bookId={{item.isbn}}">
+    <view class='list-item' >
+      <view class='item-left'>
+        <image wx-if="item.images" src='{{item.image}}'></image>
+      </view>
+      <view class="item-right">
+        <view class="item-text">
+          <text class="item-title">{{item.name}}</text>
+          <text class="item-author">{{item.author}}</text>
+        </view>
+          <view class="price-text">
+          <text class="price-discount">优惠价</text>
+          <text class="price-money">¥{{item.price}}</text>
+        </view>
+      </view>
+    </view>
+    </navigator>
+  </view>
+  <view class='sellbook-box' bindtap='sellbook'>
+    <image class='sellbook-img' src='../../imgs/scan_code.png'></image>一键卖书
+  </view> 
+</view>
